@@ -25,7 +25,7 @@ app = Flask(__name__)
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "change-me")
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN", "")
 IG_BUSINESS_ACCOUNT_ID = os.environ.get("IG_BUSINESS_ACCOUNT_ID", "")
-
+log.info("PAGE_ACCESS_TOKEN loaded: length=%d start=%r end=%r" % (len(PAGE_ACCESS_TOKEN), PAGE_ACCESS_TOKEN[:10], PAGE_ACCESS_TOKEN[-10:]))
 GRAPH_API_VERSION = "v21.0"
 GRAPH_BASE = f"https://graph.instagram.com/{GRAPH_API_VERSION}"
 
